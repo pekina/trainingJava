@@ -1,0 +1,29 @@
+/*
+ * Perla Huerta
+ * 10/Agosto/2020
+ * Leer por teclado la nota de los alumnos de una clase y calcular la nota media del grupo.
+ * Mostar los alumnos con notas superiores a la media.
+ */
+package array;
+
+import java.util.Scanner;
+
+public class Ejercicio3 {
+	public static void main(String[] args) {
+		Scanner e = new Scanner(System.in);
+		int suma = 0;
+		double promedio;
+		int[] arreglo = new int[10];
+		
+		for(int i = 0; i < arreglo.length; i++) {
+			System.out.printf("Número para la posicion %d: ", i);
+			arreglo[i] = e.nextInt();
+			if(i%2 == 0)//Si es posicion par se suma el valor
+				suma += arreglo[i];
+		}
+		
+		promedio = suma / 5;
+		System.out.printf("La media de los números en las posiciones pares es: %.2f",promedio);
+		e.close();
+	}
+}

@@ -1,0 +1,44 @@
+/*
+ * Perla Huerta
+ * 7/Agosto/2020
+ * Comprobar si dos números son amigos.
+ */
+package generales;
+import java.util.Scanner;
+
+public class Ejercicio7 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		int num1, num2, suma = 0;
+		boolean amigos = false;
+		System.out.print("Introduzca el primer número: ");
+		num1 = e.nextInt();
+		System.out.print("Introduzca el segundo número: ");
+		num2 = e.nextInt();
+		e.close();
+		
+		//Se válida el primer número
+		for(int divisor = 1; divisor < num1; divisor++)
+		{
+			if(num1%divisor == 0)
+				suma+=divisor;
+		}
+		//Si la suma de los divisores de num1 es igual al num2, entonces se procede a evaluar el segundo numero
+		if (suma == num2) {
+			suma = 0;
+			for(int divisor = 1; divisor < num2; divisor++)
+			{
+				if(num2%divisor == 0)
+					suma+=divisor;
+			}
+			//Si la suma de los divisores de num2 es igual al num1, entonces son números amigos
+			if(suma == num1)
+				System.out.println(num1 + " y " + num2 + " son números amigos.");	
+			else
+				System.out.println("No son amigos");
+		}
+		else
+			System.out.println("No son amigos");
+	}
+}

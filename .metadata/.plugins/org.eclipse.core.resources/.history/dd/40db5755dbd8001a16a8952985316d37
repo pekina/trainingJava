@@ -1,0 +1,38 @@
+/*
+ * Perla Huerta
+ * 7/Agosto/2020
+ * Mostrar los N primeros términos de la serie de Fibonacci.
+ */
+package generales;
+import java.util.Scanner;
+
+public class Ejercicio8 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		int num;
+		System.out.print("Introduzca un número: ");
+		num = e.nextInt();
+		e.close();
+		
+		/*Se definen el primer término de la serie que es 0 y el segundo término que es 1
+		 * En este caso, 0 fungirá como anterior y 1 como número actual.
+		 * Esto con la finalidad de poder comenzar con la sucesión
+		 */
+		int anterior = 0, actual = 1;
+		
+		//Se muestran en pantalla el primer término
+		System.out.print(anterior);
+		
+		/*Se comienzan a calcular los siguientes términos hasta num
+		 * considerando que ya se tienen 2 números calculados
+		 */
+		for(int cont = 2; cont <= num; cont++)
+		{
+			System.out.print(" " + actual);
+			//Se actualizan las variables
+			actual = anterior + actual; 
+			anterior = actual - anterior;
+		}
+	}
+}

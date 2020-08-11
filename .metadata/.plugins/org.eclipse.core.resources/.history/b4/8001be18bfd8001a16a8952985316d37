@@ -1,0 +1,22 @@
+/*
+ * Perla Huerta
+ * 7/Agosto/2020
+ * Mostrar la tabla de multiplicar de un número.
+ */
+package generales;
+
+import java.util.Scanner;
+
+public class Ejercicio4 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		System.out.print("Ingrese un número: ");
+		int num = e.nextInt();
+		e.close();
+		
+		for (int i = 1; i>=10;i++) {
+			System.out.println(num + "x" + i + "= " + num*i);
+		}
+	}
+}

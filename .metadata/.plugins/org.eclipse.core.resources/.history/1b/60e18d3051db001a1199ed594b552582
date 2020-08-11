@@ -1,0 +1,40 @@
+/*
+ * Perla Huerta
+ * 10/Agosto/2020
+ * Leer el nombre y sueldo de 20 empleados y mostrar el nombre y sueldo del empleado que más gana.
+ */
+package array;
+import java.util.Scanner;
+
+public class Ejercicio8 {
+	public static void main(String[] args) {
+		Scanner e = new Scanner(System.in);
+		double mayor = 0.0;
+		String nombreEmpleado = "";
+		
+		String[][] empleados = new String[20][2];
+		
+		//Llenar el arreglo
+		for(int fila = 0; fila < 20; fila++) {
+			System.out.printf("Nombre del empleado %d: ",fila+1);
+			empleados[fila][0] = e.nextLine();
+			System.out.printf("Sueldo: ");
+			empleados[fila][1] = e.nextLine();	
+		}
+		
+		//Se busca el sueldo más alto
+		for(int fila = 0; fila < 20; fila++) {
+			if(Double.parseDouble(empleados[fila][1]) > mayor) {
+				mayor = Double.parseDouble(empleados[fila][1]);
+				nombreEmpleado = empleados[fila][0];
+			}
+			else if (Double.parseDouble(empleados[fila][1]) == mayor) {
+				nombreEmpleado = nombreEmpleado + ", " + empleados[fila][0];
+			}
+		}
+		
+		System.out.println("El empleado (o empleados) que ganan más es: " + nombreEmpleado);
+		System.out.printf("Con un sueldo de: %.2f", mayor);
+	}
+	e.close();
+}

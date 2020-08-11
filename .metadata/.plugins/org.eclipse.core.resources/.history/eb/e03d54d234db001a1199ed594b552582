@@ -1,0 +1,31 @@
+/*
+ * Perla Huerta
+ * 10/Agosto/2020
+ * Leer 10 números enteros por teclado y guardarlos en un array.
+ * Calcula y muestra la media de los números que estén en las posiciones pares del array.
+ */
+package array;
+
+import java.util.Scanner;
+
+public class Ejercicio2 {
+	public static void main(String[] args) {
+		Scanner e = new Scanner(System.in);
+		int suma = 0, contador =0;
+		double promedio;
+		int[] arreglo = new int[10];
+		
+		for(int i = 0; i < arreglo.length; i++) {
+			System.out.printf("Número para la posicion %d: ", i);
+			arreglo[i] = e.nextInt();
+		}
+		
+		for(int i = 0; i < arreglo.length; i= i+2) {
+			suma += arreglo[i];
+			contador++;
+		}
+		promedio = suma / (contador * 1.0);
+		System.out.printf("La media de los números en las posiciones pares es: %.2f",promedio);
+		e.close();
+	}
+}

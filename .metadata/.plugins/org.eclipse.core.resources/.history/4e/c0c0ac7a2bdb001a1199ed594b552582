@@ -1,0 +1,40 @@
+/*
+ * Perla Huerta
+ * 10/Agosto/2020
+ * Mostrar un contador de 5 dígitos. En lugar del dígito 3 se debe mostrar E
+ */
+package buclesAnidados;
+import java.util.Scanner;
+
+public class Ejercicio5 {
+	public static void main(String[] args) {
+		Scanner e = new Scanner(System.in);
+		
+		//Ciclo para decenas de millar
+		for (int dM = 0; dM <= 9; dM++) {
+			//Ciclo para unidades de millar
+			for (int uM = 0; uM <= 9; uM++) {
+				//Ciclo para centenas
+				for (int c = 0; c <= 9; c++) {
+					//Ciclo para decenas
+					for (int d = 0; d <= 9; d++) {
+						//Ciclo para unidades
+						for (int u = 0; u <= 9; u++) {
+							System.out.print(dM == 3 ? "E" : dM);
+							System.out.print(uM == 3 ? "E" : uM);
+							System.out.print(c == 3 ? "E" : c);
+							System.out.print(d == 3 ? "E" : d);
+							System.out.print(u == 3 ? "E" : u);
+							System.out.print(" ");
+						}
+						//Imprime un salto de línea cada 10
+						System.out.println();
+					}
+				}
+				System.out.println("Presione una tecla para continuar con los siguientes 1000 números.");
+				e.nextLine();
+			}
+		}
+		e.close();
+	}
+}

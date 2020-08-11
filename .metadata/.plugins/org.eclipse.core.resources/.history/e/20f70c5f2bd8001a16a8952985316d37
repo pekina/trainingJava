@@ -1,0 +1,27 @@
+/*
+ * Perla Huerta
+ * 7/Agosto/2020
+ * Intercambiar el contenido de dos variables
+ */
+package generales;
+import java.util.Scanner;
+
+public class Ejercicio1 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		String a, b, aux;
+		System.out.print("Introduzca un valor para a: ");
+		a = e.nextLine();
+		System.out.print("Introduzca un valor para b: ");
+		b = e.nextLine();
+		e.close();
+
+		aux = a;
+		a = b;
+		b = a;
+		
+		System.out.println("Nuevo valor de a: " + a);
+		System.out.println("Nuevo valor de b: " + b);
+	}
+}

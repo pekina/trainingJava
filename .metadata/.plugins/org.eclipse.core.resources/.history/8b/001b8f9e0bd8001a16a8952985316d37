@@ -1,0 +1,23 @@
+/*
+ * Perla Huerta
+ * 6/Agosto/2020
+ * Programa que lea un número entero y muestre si el número es múltiplo de 10.
+ */
+package basicosCondicional;
+import java.util.Scanner;
+
+public class Ejercicio2 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		
+		System.out.print("Introduzca un número entero: ");
+		int i = e.nextInt();
+		e.close();
+		
+		if(i%10 == 0)
+			System.out.println(i + " es múltiplo de 10.");
+		else
+			System.out.println(i + " no es múltiplo de 10.");
+	}
+}

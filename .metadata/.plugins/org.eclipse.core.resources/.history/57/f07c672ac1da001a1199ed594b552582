@@ -1,0 +1,41 @@
+/*
+ * Perla Huerta
+ * 7/Agosto/2020
+ * Comprobar si un número entero es capicúa
+ */
+package generales;
+import java.util.Scanner;
+
+public class Ejercicio13 {
+	public static void main(String[] args) {
+		Scanner e = new Scanner(System.in);
+		char opcion;
+		int num;
+		
+		do {
+			System.out.print("Ingrese un número entero: ");
+			num = e.nextInt();
+			
+			System.out.println(esCapicua(num));
+			
+			System.out.println();
+			System.out.print("¿Desea ingresar otro número? (S/N): ");
+			opcion = e.next().toUpperCase().charAt(0);
+		}while(opcion == 'S');
+	}
+	
+	public static String esCapicua(int num) {
+		int numero, a, nuevoNum = 0, posicion;
+		numero = num;
+		do{
+			a = numero % 10;
+			nuevoNum += a;
+			numero /= 10;
+		}while(numero > 0);
+			 
+		if(num == nuevoNum)
+         	return "Es capicua";
+		
+		return "No es capícua";
+	}
+}

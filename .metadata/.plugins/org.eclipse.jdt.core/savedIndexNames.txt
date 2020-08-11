@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\eperhue\Documents\Ericsson\JavaWP\.metadata\.plugins\org.eclipse.jdt.core
+1005975374.index
+2380175872.index

@@ -1,0 +1,29 @@
+/*
+ * Perla Huerta
+ * 6/Agosto/2020
+ * Programa que lea dos caracteres y compruebe si son dos letras minúsculas.
+ */
+package basicosCondicional;
+import java.util.Scanner;
+
+public class Ejercicio5 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		
+		System.out.print("Introduzca el primer caracter: ");
+		char caracter1 = e.next().charAt(0);
+		System.out.print("Introduzca el segundo caracter: ");
+		char caracter2 = e.next().charAt(0);
+		e.close();
+		
+		if(Character.isLowerCase(caracter1) && Character.isLowerCase(caracter2))
+			System.out.println("Son minusculas");
+		else if (Character.isLowerCase(caracter1))
+			System.out.println(caracter2 + " no es minúscula.");
+		else if (Character.isLowerCase(caracter2))
+			System.out.println(caracter1 + " no es minúscula.");
+		else
+			System.out.println("No son minúsculas.");
+	}
+}

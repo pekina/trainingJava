@@ -1,0 +1,43 @@
+/*
+ * Perla Huerta
+ * 10/Agosto/2020
+ * Leer por teclado la nota de los alumnos de una clase y calcular la nota media del grupo.
+ * Mostar los alumnos con notas superiores a la media.
+ */
+package array;
+
+import java.util.Scanner;
+
+public class Ejercicio3 {
+	public static void main(String[] args) {
+		Scanner e = new Scanner(System.in);
+		int alumnos;
+		double promedio, suma = 0.0;
+		do {
+			System.out.print("Número de alumnos en la clase: ");
+			alumnos = e.nextInt();
+		}while(alumnos < 0);
+		
+		//Se crea el arreglo
+		double[] arreglo = new double[alumnos];
+		
+		//Se leen las notas de los alumnos y se van sumando para obtener el promedio
+		for(int i = 0; i < arreglo.length; i++) {
+			System.out.printf("Nota del alumno %d:", i+1);
+			arreglo[i] = e.nextDouble();
+			suma += arreglo[i];
+		}
+		
+		promedio = suma / (alumnos * 1.0);
+
+		//Obtiene las notas que son mayores al promedio
+		System.out.printf("La media de las notas de los alumnos de la clase es: %.2f",promedio);
+		System.out.println("Los alumnos con notas superiores al promedio son:");
+		for (int i = 0; i < arreglo.length; i++) {
+			if(arreglo[i] > promedio)
+				System.out.printf("Alumno %d : %f", i+1, arreglo[i]);
+		}
+		
+		e.close();
+	}
+}

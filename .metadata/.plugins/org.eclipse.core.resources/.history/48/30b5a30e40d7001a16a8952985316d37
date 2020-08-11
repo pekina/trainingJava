@@ -1,0 +1,33 @@
+/**
+ * @author Perla Huerta
+ * Programa java que realice lo siguiente: 
+ * declarar dos variables X e Y de tipo int, dos variables N y M de tipo double y asigna a cada una un valor. 
+ * A continuación realiza y muestra muestra por pantalla una serie de operaciones entre ellas.
+ * */
+
+public class Ejercicio2 {
+	public static void main(String[] args)
+	{
+		int x = 23, y = 77;
+		double n = 34.76, m = 23.1;
+		
+		System.out.println("Valor de x: " + x);
+		System.out.println("Valor de y: " + y);
+		System.out.println("Valor de n: " + n);
+		System.out.println("Valor de m: " + m);
+		System.out.println("x + y = " + (x+y));
+		System.out.println("y - x = " + (y-x));
+		System.out.println("x * y = " + (x*y));
+		System.out.println("y / x = " + (y/x));
+		System.out.println("x % y = " + (x%y));
+		System.out.println("n + m = " + (n+m));
+		System.out.println("n - m = " + (n-m));
+		System.out.println("n * m = " + (n*m));
+		System.out.println("n / m = " + (n/m));
+		System.out.println("n % m = " + (n%m));
+		
+		System.out.println("n es mayor que m = " + (n>m));
+		System.out.println("x es mayor que y = " + (x>y));
+		
+	}
+}

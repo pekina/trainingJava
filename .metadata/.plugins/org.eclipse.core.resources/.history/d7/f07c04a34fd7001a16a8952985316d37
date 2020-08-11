@@ -1,0 +1,22 @@
+/*
+ * Perla Huerta
+ * 5/Agosto/2020
+ * Programa lea la longitud de los catetos de un triángulo rectángulo
+ * y calcule la longitud de la hipotenusa según el teorema de Pitágoras.
+ */
+package basicosSecuenciales;
+import java.util.Scanner;
+
+public class Ejercicio7 {
+	public static void main(String[] args) {
+		double catetoA, catetoB;
+		Scanner e = new Scanner(System.in);
+		System.out.print("Longitud del primer cateto: ");
+		catetoA = e.nextDouble();
+		System.out.print("Longitud del segundo cateto: ");
+		catetoB = e.nextDouble();
+		e.close();
+		double hipotenusa =  Math.sqrt(Math.pow(catetoA, 2) + Math.pow(catetoB, 2));
+		System.out.println("La longitud de la hipotenusa es: " + hipotenusa);
+	}
+}

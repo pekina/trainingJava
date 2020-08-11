@@ -1,0 +1,40 @@
+/*
+ * Perla Huerta
+ * 7/Agosto/2020
+ * Cifrado Cesar para codificar y decodificar un texto
+ */
+package generales;
+import java.util.Scanner;
+
+public class Ejercicio12 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		char opcion;
+		String texto;
+		int clave;
+		System.out.println("Ingrese el texto:");
+		texto = e.nextLine();
+		System.out.println("Ingrese la clave:");
+		clave = e.nextInt();
+		
+		System.out.println();
+		
+		
+		System.out.println("Seleccione una opción");
+		System.out.println("(C)odificar | (D)ecodificar | (S)alir");
+		System.out.print("Opcion: ");
+		opcion = e.next().charAt(0);
+		
+		switch (Character.toUpperCase(opcion))
+		{
+			case 'C':
+				Codificar(texto, clave);
+				break;
+		}
+	}
+	
+	private static void Codificar(String texto, int clave) {
+		
+	}
+}

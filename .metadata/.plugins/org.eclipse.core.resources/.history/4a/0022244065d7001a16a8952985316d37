@@ -1,0 +1,22 @@
+/*
+ * Perla Huerta
+ * 5/Agosto/2020
+ * Programa que lea un número entero N de 5 cifras
+ * y muestre sus cifras desde el final igual que en el ejemplo.
+ * 45623  -> Cifras: 3 2 6 5 4
+ */
+package basicosSecuenciales;
+import java.util.Scanner;
+
+public class Ejercicio12 {
+	public static void main(String[] args) {
+		Scanner e = new Scanner(System.in);
+		int n;
+		System.out.println("Introduzca un número de 5 cifras: ");
+		n = e.nextInt();
+		e.close();
+		
+		System.out.println("Cifras: " +n % 10 + " " + n % 100 / 10 + " " + 
+				n % 1000 / 100 + " " + n % 10000 / 1000 + " " + n / 10000);
+	}
+}

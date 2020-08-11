@@ -1,0 +1,38 @@
+/*
+ * Perla Huerta
+ * 10/Agosto/2020
+ * Leer 10 enteros y mostrar la media de los valores negativos y la de los positivos.
+ */
+package array;
+import java.util.Scanner;
+
+public class Ejercicio6 {
+	public static void main(String[] args) {
+		int[] arreglo = new int[10];
+		int positivo = 0, negativo = 0, contPos = 0, contNeg = 0;
+		Scanner e = new Scanner(System.in);
+		
+		//Se ingresan los numeros por teclado
+		for (int index = 0; index <= arreglo.length; index++) {
+			System.out.println("Elemento " + index + 1 + ": ");
+			arreglo[index] = e.nextInt();
+		}
+		
+		//Se vuelve a recorrer el arreglo para contar los numeros positivos y negativos
+		for (int index = 0; index <= arreglo.length; index++) {
+			if(arreglo[index] >= 0) {
+				positivo += arreglo[index];
+				contPos++;
+			}
+			else
+			{
+				negativo += arreglo[index];
+				contNeg++;
+			}
+		}
+		
+		System.out.printf("Media de números positivos: %.2f\n", positivo / (contPos * 1.0));
+		System.out.printf("Media de números negativos: %.2f\n", negativo / (contNeg * 1.0));
+		e.close();
+	}
+}

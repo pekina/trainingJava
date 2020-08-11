@@ -1,0 +1,21 @@
+/*
+ * Perla Huerta
+ * 5/Agosto/2020
+ * Programa que lee un número de 3 cifras y muestra sus cifras por separado.
+ */
+package basicosSecuenciales;
+import java.util.Scanner;
+
+public class Ejercicio10 {
+	public static void main(String[] args) {
+		Scanner e = new Scanner(System.in);
+		int n;
+		System.out.print("Introduzca un número de 3 cifras: ");
+		n = e.nextInt();
+		e.close();
+		
+		System.out.println("Cifra 1: " + n / 100);
+		System.out.println("Cifra 2: " + n % 100 / 10);
+		System.out.println("Cifra 2: " + n % 10);
+	}
+}

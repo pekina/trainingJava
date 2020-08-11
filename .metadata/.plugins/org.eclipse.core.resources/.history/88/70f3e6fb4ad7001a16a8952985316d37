@@ -1,0 +1,11 @@
+/*
+ * Perla Huerta
+ * 5/Agosto/2020
+ * Programa Java que lea un nombre y muestre por pantalla: “Buenos dias nombre_introducido”.
+ */
+package basicosSecuenciales;
+import java.util.Scanner;
+
+public class Ejercicio2 {
+
+}

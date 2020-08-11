@@ -1,0 +1,25 @@
+/*
+ * Perla Huerta
+ * 10/Agosto/2020
+ * Calcular la media de una serie de números que se leen por teclado.
+ */
+package array;
+import java.util.Scanner;
+
+public class Ejercicio1 {
+	public static void main(String[] args) {
+		Scanner e = new Scanner(System.in);
+		int longitud;
+		do {
+			System.out.print("Cantidad de números a insertar: ");
+			longitud = e.nextInt();
+		}while(longitud<0);
+		
+		int[] arreglo = new int[longitud];
+		for(int i = 0; i < longitud; i++) {
+			System.out.printf("Numero %d: ", i);
+			arreglo[i] = e.nextInt();
+		}
+
+	}
+}

@@ -1,0 +1,25 @@
+/*
+ * Perla Huerta
+ * 6/Agosto/2020
+ * Programa que lea dos caracteres por teclado y compruebe si son iguales.
+ */
+package basicosCondicional;
+import java.util.Scanner;
+
+public class Ejercicio4 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		
+		System.out.print("Introduzca el primer caracter: ");
+		char caracter1 = e.next().charAt(0);
+		System.out.print("Introduzca el segundo caracter: ");
+		char caracter2 = e.next().charAt(0);
+		e.close();
+		
+		if(caracter1 == caracter2)
+			System.out.println("Son iguales.");
+		else
+			System.out.println("No son iguales.");
+	}
+}

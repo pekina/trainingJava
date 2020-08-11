@@ -1,0 +1,38 @@
+/*
+ * Perla Huerta
+ * 10/Agosto/2020
+ * Llenar un array con números aleatorios.
+ */
+package array;
+import java.util.Scanner;
+
+public class Ejercicio9 {
+	public static void main(String[] args) {
+		Scanner e = new Scanner(System.in);
+		int tamano, limInicio, limFin;
+		
+		//Obtiene un número de elementos del arreglo
+		System.out.print("Introduzca el tamaño del arreglo: ");
+		tamano = e.nextInt();
+		System.out.print("Introduzca el límite inicial: ");
+		limInicio = e.nextInt();
+		do {
+			System.out.print("Introduzca el límite final (debe ser mayor al límite inicial): ");
+			limFin = e.nextInt();
+		}while(limFin < limInicio);
+		
+		int[] arreglo = new int[tamano];
+		
+		//Llena el arreglo
+		for(int index = 0; index < tamano; index++) {
+			arreglo[index] = (int)(Math.random() * (limFin - limInicio + 1) + limInicio);
+		}
+		
+		//Muestra el arreglo
+		for(int index = 0; index < tamano; index++) {
+			System.out.printf("Elemento %d: %d\n", index+1, arreglo[index]);
+		}
+		e.close();
+	
+	}
+}

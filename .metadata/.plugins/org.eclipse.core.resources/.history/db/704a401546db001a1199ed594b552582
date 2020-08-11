@@ -1,0 +1,48 @@
+/*
+ * Perla Huerta
+ * 10/Agosto/2020
+ * Leer N alturas y calcular la altura media.
+ * Calcular cuántas hay superiores a la media y cuántas inferiores.
+ */
+package array;
+
+import java.util.Scanner;
+
+public class Ejercicio7 {
+	public static void main(String[] args) {
+		int longitud, superior = 0, inferior = 0;
+		double promedio, suma = 0;
+		Scanner e = new Scanner(System.in);
+		do {
+			//Pedir número de alturas que serán ingresadas
+			//Este número debe ser mayor a 0
+			System.out.print("Número de alturas a introducir: ");
+			longitud = e.nextInt();
+		}while(longitud <= 0);
+		
+		//Se declara el arreglo
+		double[] arreglo = new double[longitud];
+		//Se ingresan las alturas por teclado y se utiliza el mismo ciclo para ir sumando las alturas
+		for (int index = 0; index < arreglo.length; index++) {
+			System.out.printf("Altura %d: ", index + 1);
+			arreglo[index] = e.nextDouble();
+			suma += arreglo[index];
+		}
+		
+		//Se calcula promedio
+		promedio = suma / (arreglo.length * 1.0);
+		
+		//Ciclo para obtener las alturas superiores e inferiores al promedio
+		for (double altura : arreglo) {
+			if(altura >= promedio)
+				superior++;
+			else
+				inferior++;
+		}
+		
+		System.out.println("Número de alturas superiores al promedio: " + superior);
+		System.out.println("Número de alturas inferiores al promedio: " + inferior);
+		e.close();
+	}
+
+}

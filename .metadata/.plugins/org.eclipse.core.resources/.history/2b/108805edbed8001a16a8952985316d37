@@ -1,0 +1,30 @@
+/*
+ * Perla Huerta
+ * 7/Agosto/2020
+ * Mostrar la tabla de multiplicar de un número.
+ */
+package generales;
+
+import java.util.Scanner;
+
+public class Ejercicio4 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		double gradosC, gradosK;
+		char resp; 
+		
+		do {
+		
+		System.out.print("Ingrese grados centígrados: ");
+		gradosC = e.nextDouble();
+		
+		gradosK = gradosC + 273.15;
+				System.out.println(gradosC + "°C equiavale a " + gradosK + "K");
+				System.out.println("¿Repetir proceso? (S/N)");
+				resp = e.next().charAt(0);
+		}while(resp == 'S');
+		
+		e.close();
+	}
+}

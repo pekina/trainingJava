@@ -1,0 +1,32 @@
+/*
+ * Perla Huerta
+ * 10/Agosto/2020
+ * Contar el número de elementos positivos, negativos y ceros en un array de 10 enteros.
+ */
+package array;
+
+public class Ejercicio5 {
+	public static void main(String[] args) {
+		int[] arreglo = new int[10];
+		int num, positivo = 0, negativo = 0, cero = 0;
+		System.out.println("Los elementos del arreglo son: ");
+		for(int i=0; i<arreglo.length; i++) {
+			//Obtiene un número aleatorio entre -99 y 99
+			num = (int)(Math.random() * 100 - (Math.random() * 100));
+			//Evalua si es positivo, negativo o cero
+			if(num > 0) 
+				positivo++;
+			else if (num == 0)
+				cero++;
+			else
+				negativo++;
+			//Guarda el numero en el arreglo
+			arreglo[i] = num;
+			System.out.printf("Elemento %d: %d\n", i+1, arreglo[i]);
+		}
+		
+		System.out.println(positivo > 0 ? "Numeros positivos: " + positivo : "No hay números positivos");
+		System.out.println(negativo > 0 ? "Numeros negativos: " + negativo : "No hay números negativos");
+		System.out.println(cero > 0 ? "Numeros cero: " + cero : "No hay números cero");
+	}
+}

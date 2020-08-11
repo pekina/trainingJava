@@ -1,0 +1,18 @@
+/*
+ * Perla Huerta
+ * 6/Agosto/2020
+ * Programa Java que muestre los números del 100 al 1 utilizando la instrucción for
+ */
+package basicosIterativos;
+
+public class Ejercicio6 {
+	public static void main(String[] args) {
+		for(int contador=100; contador>=1; contador--) {
+			if(contador%10 != 0)
+				System.out.println(contador + " ");
+			else
+				System.out.print(contador + " ");
+			
+		}
+	}
+}

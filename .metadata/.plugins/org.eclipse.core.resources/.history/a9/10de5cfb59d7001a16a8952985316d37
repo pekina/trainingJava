@@ -1,0 +1,33 @@
+/*
+ * Perla Huerta
+ * 5/Agosto/2020
+ * Programa que calcula el número de la suerte de una persona 
+ * a partir de su fecha de nacimiento.
+ */
+package basicosSecuenciales;
+import java.util.Scanner;
+
+public class Ejercicio13 {
+	public static void main(String[] args) {
+		Scanner e = new Scanner(System.in);
+		int dia, mes, año;
+		System.out.println("Introduzca su fecha de nacimiento por partes y en formato numérico");
+		System.out.print("Día: ");
+		dia = e.nextInt();
+		System.out.print("Mes: ");
+		mes = e.nextInt();
+		System.out.print("Año: ");
+		año = e.nextInt();
+		e.close();
+		int numSuerte = dia + mes + año;
+		/*
+		 * numSuerte = numSuerte / 1000;
+		 * System.out.println("Su número de la suerte es: " + numSuerte); numSuerte =
+		 * numSuerte % 1000; System.out.println("Su número de la suerte es: " +
+		 * numSuerte); numSuerte = numSuerte % 100;
+		 * System.out.println("Su número de la suerte es: " + numSuerte); numSuerte =
+		 * numSuerte % 10;
+		 */
+		System.out.println("Su número de la suerte es: " + numSuerte);
+	}
+}

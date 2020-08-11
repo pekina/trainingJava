@@ -1,0 +1,20 @@
+/*
+ * Perla Huerta
+ * 5/Agosto/2020
+ * Programa Java que lee un número entero por teclado y obtiene y muestra por pantalla el doble y el triple de ese número.
+ */
+package basicosSecuenciales;
+import java.util.Scanner;
+
+public class Ejercicio3 {
+	public static void main (String[] args) {
+		Scanner e = new Scanner(System.in);
+		System.out.print("Introduce un numero entero: ");
+		int n = e.nextInt();
+		e.close();
+		
+		System.out.println("Valor introducido: " + n);
+		System.out.println("Doble de " + n + ": " + n*2);
+		System.out.println("Triple de " + n + ": " + n*3);
+	}
+}

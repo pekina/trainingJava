@@ -1,0 +1,39 @@
+/*
+ * Perla Huerta
+ * 7/Agosto/2020
+ * Convertir a Números Romanos
+ */
+package generales;
+import java.util.Scanner;
+
+/*Al no encontrar alguna forma de representar valores mayores a 4000, 
+ * se opta por limitar la conversión de 1 a 3999*/
+public class Ejercicio11 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		int num, millares, centenas, decenas, unidades;
+		System.out.print("Introduzca un número (0 para salir): ");
+		num = e.nextInt();
+
+		while(num > 0) {
+			
+			
+			if(num > 0 && num<=3999)
+			{
+				//Obtiene millares, centenas, decenas y unidades
+				millares = num/1000;
+				centenas = num / 100 % 10;
+				decenas = num / 10 % 10;
+				unidades = num % 10;
+				
+			}
+			else
+				System.out.println("El número debe ser menor o igual a 3999.");
+			
+			System.out.print("Introduzca un número (0 para salir): ");
+			num = e.nextInt();
+		}
+		e.close();
+	}
+}

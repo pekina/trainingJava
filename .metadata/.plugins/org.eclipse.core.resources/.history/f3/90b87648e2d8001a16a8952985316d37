@@ -1,0 +1,29 @@
+/*
+ * Perla Huerta
+ * 7/Agosto/2020
+ * Pasar de decimal a binario
+ */
+package generales;
+
+import java.util.Scanner;
+
+public class Ejercicio9 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		int decimal;
+		String binario="";
+		System.out.print("Introduzca un número decimal: ");
+		decimal = e.nextInt();
+		e.close();
+		
+		System.out.print("El número decimal (" + decimal + ") en binario es:");
+		while(decimal != 0)
+		{
+			int r = decimal%2;
+			decimal /= 2;
+			binario = r + binario;
+		}
+		System.out.print(binario);
+	}
+}

@@ -1,0 +1,22 @@
+/*
+ * Perla Huerta
+ * 6/Agosto/2020
+ * Programa que lea un carácter y compruebe si es un número (Carácter entre '0' y '9').
+ */
+package basicosCondicional;
+import java.util.Scanner;
+
+public class Ejercicio6 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		
+		System.out.print("Introduzca un caracter: ");
+		char caracter = e.next().charAt(0);
+		e.close();
+		
+		if(caracter >= '0' && caracter <= '9')
+			System.out.println("Es un número.");
+		else
+			System.out.println("No es un número.");
+}

@@ -1,0 +1,21 @@
+/*
+ * Perla Huerta
+ * 10/Agosto/2020
+ * Guardar en un array los 20 primeros números pares
+ */
+package array;
+
+public class Ejercicio4 {
+	int[] arreglo = new int[20];
+	int cont = 0;
+	for(int i=0; i<arreglo.lenght; i++) {
+		arreglo[i] = cont;
+		cont += 2;
+	}
+	
+	System.out.println("Los elementos del arreglo son: ");
+	for(int a : arreglo)
+	{
+		System.out.println(a);
+	}
+}

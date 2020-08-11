@@ -1,0 +1,23 @@
+/*
+ * Perla Huerta
+ * 6/Agosto/2020
+ * Programa que lea un carácter por teclado y compruebe si es una letra mayúscula.
+ */
+package basicosCondicional;
+import java.util.Scanner;
+
+public class Ejercicio3 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		
+		System.out.print("Introduzca un número entero: ");
+		char caracter = e.next().charAt(0);
+		e.close();
+		
+		if(Character.isUpperCase(caracter))
+			System.out.println(caracter + " es mayúscula.");
+		else
+			System.out.println(caracter + " es minúscula.");
+	}
+}

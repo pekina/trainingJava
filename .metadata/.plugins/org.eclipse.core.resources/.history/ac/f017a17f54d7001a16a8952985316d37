@@ -1,0 +1,28 @@
+/*
+ * Perla Huerta
+ * 5/Agosto/2020
+ * Programa que calcula el área de un triángulo a partir de la longitud de sus lados.
+ */
+package basicosSecuenciales;
+import java.util.Scanner;
+
+public class Ejercicio9 {
+	public static void main(String[] args) {
+		/*Usando la fórmula de Herón:
+		 * area = raiz2(s*(s-a)*(s-b)*(s-c))
+		 * donde s = semiperimetro = (a+b+c)/2
+		 */
+		Scanner e = new Scanner(System.in);
+		double a, b, c, area, s;
+		System.out.print("Introduzca la longitud del primer lado: ");
+		double a = e.nextDouble();
+		System.out.print("Introduzca la longitud del segundo lado: ");
+		double b = e.nextDouble();
+		System.out.print("Introduzca la longitud del tercer lado: ");
+		double c = e.nextDouble();
+		e.close();
+		s = (a+b+c)/2.0;
+		area = Math.sqrt(s*(s-a)*(a-b)*(a-c));
+		System.out.println("El área del triángulo es: " + area);
+	}
+}

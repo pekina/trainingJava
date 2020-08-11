@@ -1,0 +1,23 @@
+/*
+ * Perla Huerta
+ * 5/Agosto/2020
+ * Programa Java que lea dos números enteros por teclado y los muestre por pantalla.
+ */
+package basicosSecuenciales;
+import java.util.Scanner;
+
+public class Ejercicio1 {
+	public static void main(String[] args)
+	{
+		Scanner entrada = new Scanner(System.in);
+		int i, j;
+		System.out.print("Introduzca un número entero: ");
+		i = entrada.nextInt();
+		
+		System.out.print("Introduzca otro número entero: ");
+		j = entrada.nextInt();
+		entrada.close();
+		
+		System.out.println("Se introdujeron los números " + i + " y " + j);
+	}
+}

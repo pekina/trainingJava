@@ -1,0 +1,24 @@
+/*
+ * Perla Huerta
+ * 7/Agosto/2020
+ * Leer un número N y calcular el factorial de los números desde 0 hasta N.
+ */
+package buclesAnidados;
+import java.util.Scanner;
+
+public class Ejercicio2 {
+	public static void main(String[] args) {
+		Scanner e = new Scanner(System.in);
+		int numero;
+		System.out.println("Introduzca un número: ");
+		numero = e.nextInt();
+		
+		for (int contador = 0; contador <= numero; contador++)
+		{
+			for (int fac = contador; fac >= 1; fac--)
+			{
+				
+			}
+		}
+	}
+}

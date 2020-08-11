@@ -1,0 +1,18 @@
+/*
+ * Perla Huerta
+ * 5/Agosto/2020
+ * Programa que pase una velocidad en Km/h a m/s. La velocidad se lee por teclado.
+ */
+package basicosSecuenciales;
+import java.util.Scanner;
+
+public class Ejercicio6 {
+	public static void main(String[] args) {
+		Scanner e = new Scanner(System.in);
+		System.out.print("Introduce la velocidad (Km/h): ");
+		double velocidad = e.nextDouble();
+		e.close();
+		velocidad =  velocidad * 1000 / 3600;
+		System.out.println("La velocidad en m/s es: " + velocidad);
+	}
+}

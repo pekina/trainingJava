@@ -1,0 +1,27 @@
+/*
+ * Perla Huerta
+ * 6/Agosto/2020
+ * Programa que lea dos números por teclado y muestre el resultado de la división 
+ * del primero por el segundo. Se debe comprobar que el divisor no puede ser cero.
+ */
+package basicosCondicional;
+import java.util.Scanner;
+
+public class Ejercicio7 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		double num1, num2;
+		System.out.print("Introduzca el primer número: ");
+		num1 = e.nextDouble();
+		System.out.print("Introduzca el segundo número: ");
+		num2 = e.nextDouble();
+		e.close();
+		
+		if(num2 != 0)
+			System.out.println("El resultado de la división es: " + num1/num2);
+		else
+			System.out.println("El divisor no puede ser cero.");
+		
+	}
+}

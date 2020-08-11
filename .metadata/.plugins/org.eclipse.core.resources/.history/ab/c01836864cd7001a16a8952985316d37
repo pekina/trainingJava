@@ -1,0 +1,19 @@
+/*
+ * Perla Huerta
+ * 5/Agosto/2020
+ * Programa que lea una cantidad de grados centígrados y la pase a grados Fahrenheit. 
+ * La fórmula correspondiente es: F = 32 + ( 9 * C / 5)
+ */
+package basicosSecuenciales;
+import java.util.Scanner;
+
+public class Ejercicio4 {
+	public static void main(String[] args) {
+		Scanner e = new Scanner(System.in);
+		System.out.print("Introduce un valor en grados centígrados: ");
+		double c = e.nextDouble();
+		e.close();
+		double f = 32 + (9 * c / 5);
+		System.out.println(c + "°C corresponde a " + f + "°F");
+	}
+}

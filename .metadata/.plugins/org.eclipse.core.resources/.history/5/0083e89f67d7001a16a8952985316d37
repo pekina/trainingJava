@@ -1,0 +1,23 @@
+/*
+ * Perla Huerta
+ * 5/Agosto/2020
+ * Programa Java que lea un número entero y calcule si es par o impar.
+ */
+package basicosCondicional;
+import java.util.Scanner;
+
+public class Ejercicio1 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		
+		System.out.print("Introduzca un número entero: ");
+		int i = e.nextInt();
+		e.close();
+		
+		if(i%2 == 0)
+			System.out.println(i + " es número par.");
+		else
+			System.out.println(i + " es número impar.");
+	}
+}

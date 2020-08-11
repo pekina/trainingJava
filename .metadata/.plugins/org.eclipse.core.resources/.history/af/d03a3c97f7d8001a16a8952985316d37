@@ -1,0 +1,138 @@
+/*
+ * Perla Huerta
+ * 7/Agosto/2020
+ * Convertir a Números Romanos
+ */
+package generales;
+import java.util.Scanner;
+
+/*Al no encontrar alguna forma de representar valores mayores a 4000, 
+ * se opta por limitar la conversión de 1 a 3999*/
+public class Ejercicio11 {
+	public static void main(String[] args)
+	{
+		Scanner e = new Scanner(System.in);
+		int num, millares, centenas, decenas, unidades;
+		String romano;
+		System.out.print("Introduzca un número (0 para salir): ");
+		num = e.nextInt();
+
+		while(num > 0) {
+			romano = "";
+			if(num > 0 && num<=3999)
+			{
+				//Obtiene millares, centenas, decenas y unidades
+				millares = num/1000;
+				centenas = num / 100 % 10;
+				decenas = num / 10 % 10;
+				unidades = num % 10;
+				
+				//Millares
+				for (int i =1;i<=millares;i++)
+					romano += "M";
+				
+				//Centenas
+				switch(centenas)
+				{
+					case 1:
+					case 2:
+					case 3:
+					{
+						for (int i = 1;i<=millares;i++)
+							romano += "C";
+						break;
+					}
+					case 4:
+						romano += "CD";
+						break;
+					case 5:
+						romano += "D";
+						break;
+					case 6:
+					case 7:
+					case 8:
+						romano += "D";
+						for (int i = 6;i<=centenas;i++)
+							romano += "C";
+						break;
+					case 9:
+						romano += "CM";
+						break;
+					default: //0 no imprime nada
+						break;
+				}
+				
+				//Decenas
+				switch(decenas)
+				{
+					case 1:
+					case 2:
+					case 3:
+					{
+						for (int i =1;i<=decenas;i++)
+							romano += "X";
+						break;
+					}
+					case 4:
+						romano += "XL";
+						break;
+					case 5:
+						romano += "L";
+						break;
+					case 6:
+					case 7:
+					case 8:
+						romano += "L";
+						for (int i = 6;i<=unidades;i++)
+							romano += "X";
+						break;
+					case 9:
+						romano += "XC";
+						break;
+					default: //0 no imprime nada
+						break;
+				}
+				
+				//Unidades
+				switch(unidades)
+				{
+					case 1:
+					case 2:
+					case 3:
+					{
+						for (int i =1;i<=millares;i++)
+							romano += "I";
+						break;
+					}
+					case 4:
+						romano += "IV";
+						break;
+					case 5:
+						romano += "V";
+						break;
+					case 6:
+					case 7:
+					case 8:
+						romano += "V";
+						for (int i =6;i<=millares;i++)
+							romano += "I";
+						break;
+					case 9:
+						romano += "IX";
+						break;
+					default: //0 no imprime nada
+						break;
+				}
+				
+				System.out.println("El número en romanos es: " + romano);
+			}
+			else
+				System.out.println("El número debe ser menor o igual a 3999.");
+			
+			System.out.println();
+			System.out.print("Introduzca un número (0 para salir): ");
+			num = e.nextInt();
+		}
+		e.close();
+	}
+}
